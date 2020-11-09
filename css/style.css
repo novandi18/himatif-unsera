@@ -1,0 +1,250 @@
+@font-face {
+    src: url("../fonts/Poppins.ttf");
+    font-family: Poppins;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: Poppins;
+    background: radial-gradient(circle at top left, #8fd4ff, #48c2ff);
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'logo logo'
+        'menu menu'
+        'image image'
+        'content content'
+        'footer footer';
+}
+
+.item {
+    width: 100%;
+    /* display: flex; */
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+    grid-area: logo;
+    padding: 0;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo a {
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #08596A;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Menu */
+.menu {
+    grid-area: menu;
+    margin-top: 5px;
+    background-color: transparent;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    padding: 0;
+    /* background-color: black; */
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.menu ul li a {
+    color: #08596A;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.menu ul li .active {
+    font-weight: bold;
+}
+
+/* Content */
+.content {
+    grid-area: content;
+    padding: 0 25px;
+    background-color: transparent;
+}
+
+.content h1 {
+    color: #08596A;
+    font-size: 50px;
+    text-align: center;
+}
+
+.content p {
+    margin-top: -25px;
+    line-height: 1.5;
+    color: #08596A;
+    text-align: center;
+}
+
+.content .btn {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.content .btn .btnJoin {
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 15px 40px;
+    background-color: #e93553;
+    color: #fff;
+    margin-right: 10px;
+    transition: all ease-in .2s;
+}
+
+.content .btn .btnJoin:hover {
+    background-color: #ff4665;
+    box-shadow: 1px 5px 15px 5px rgba(63, 48, 102, .1);
+    transition: all ease-in .2s;
+}
+
+.content .btn .btnJoin:focus {
+    background-color: #3f3066;
+    box-shadow: none;
+    transition: all ease-in .2s;
+}
+
+.content .btn .btnInfo {
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 15px 40px;
+    background-color: #23a6e7;
+    color: #fff;
+    transition: all ease-in .2s;
+}
+
+.content .btn .btnInfo:hover {
+    box-shadow: 1px 5px 15px 5px rgba(63, 48, 102, .1);
+    background-color: #1fb0f8;
+    transition: all ease-in .2s;
+}
+
+.content .btn .btnInfo:focus {
+    box-shadow: none;
+    background-color: #23a6e7;
+    transition: all ease-in .2s;
+}
+
+/* Image */
+.image {
+    grid-area: image;
+    padding: 0;
+    background-color: transparent;
+    /* background-color: #000; */
+    /* padding: 50px; */
+}
+
+.image img {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    padding: 0;
+    margin-top: 100px;
+    height: 20vh;
+    padding-bottom: 100px;
+    background-color: transparent;
+    width: 100%;
+    background-image: url("../img/wave2.png");
+}
+
+/* Untuk Responsive */
+@media screen and (min-width: 576px) {
+    .container {
+        grid-template-areas: 
+        'logo menu'
+        'content image'
+        'footer footer';
+    }
+
+    /* Logo */
+    .logo {
+        padding-left: 75px;
+        justify-content: start;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+    
+    .logo a {
+        font-size: 25px;
+    }
+
+    /* Menu */
+    .menu {
+        padding-right: 75px;
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+
+    .menu ul li a {
+        padding: 15px 20px;
+    }
+
+    /* Image */
+    .image img {
+        width: 80%;
+    }
+
+    /* Content */
+    .content {
+        padding-left: 75px;
+        padding-top: 10px;
+    }
+
+    .content h1 {
+        text-align: left;
+    }
+
+    .content p {
+        text-align: left;
+    }
+    
+    .content .btn {
+        text-align: left;
+    }
+
+    /* Footer */
+    .footer {
+        padding-bottom: 200px;
+        margin: 0;
+        width: 100%;
+        background-image: url("../img/wave2.png");
+    }
+
+    .footer span {
+        font-weight: bold;
+        color: rgb(56, 56, 56);
+        margin-left: 75px;
+    }
+}
