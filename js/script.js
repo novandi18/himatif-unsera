@@ -29,9 +29,11 @@ toggle.addEventListener("click", function() {
 
 function myFunction(x) {
     if (x.matches) {
+        document.querySelector(".image img").style.marginTop = "80px";
         let prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         let currentScrollPos = window.pageYOffset;
+
 
         if (prevScrollpos > currentScrollPos) {
             document.querySelector(".menu").style.top = "69px";
@@ -69,6 +71,7 @@ function myFunction(x) {
             prevScrollpos = currentScrollPos;
         }
     } else {
+        document.querySelector(".image img").style.marginTop = "0";
         document.querySelector(".logo").style.backgroundColor = "transparent";
         document.querySelector(".logo").style.boxShadow = "none";
         document.querySelector(".menu").style.backgroundColor = "transparent";
