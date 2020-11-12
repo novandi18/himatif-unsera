@@ -171,14 +171,14 @@ html, body {
 }
 
 .content .btn {
-    margin-top: 35px;
+    margin-top: 50px;
     text-align: center;
 }
 
 .content .btn .btnJoin {
     border-radius: 30px;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 20px 60px;
     background-color: #e93553;
     color: #fff;
     margin-right: 10px;
@@ -192,7 +192,7 @@ html, body {
 }
 
 .content .btn .btnJoin:focus {
-    background-color: #3f3066;
+    background-color: #e93553;
     box-shadow: none;
     transition: all ease-in .2s;
 }
@@ -200,7 +200,7 @@ html, body {
 .content .btn .btnInfo {
     border-radius: 30px;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 20px 60px;
     background-color: #23a6e7;
     color: #fff;
     transition: all ease-in .2s;
@@ -304,6 +304,12 @@ html, body {
     }
 
     /* Image */
+    .image {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 75px;
+    }
+    
     .image img {
         width: 80%;
         margin-top: 0;
